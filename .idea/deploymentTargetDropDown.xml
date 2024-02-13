@@ -14,10 +14,10 @@
       <entry key="testNavigationToChat()">
         <State />
       </entry>
-      <entry key="testNavigationToProfile()">
+      <entry key="testNavigationToMainActivity()">
         <State />
       </entry>
-      <entry key="useAppContext()">
+      <entry key="testNavigationToProfile()">
         <State />
       </entry>
     </value>
