@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    tools:context=".AddNewMentor">
+
+    <ImageView
+        android:id="@+id/loginCorner"
+        android:layout_width="192dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/corner"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+
+    <ImageButton
+        android:id="@+id/backArrowButton"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:fontFamily="sans-serif-condensed-light"
+            android:singleLine="true"
+            android:text="Add New Mentor"
+            android:textColor="@color/DarkCyan"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="100dp"
+            android:text="Help us expand!"
+            android:textColor="@color/DarkCyan"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck" />
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="155dp"
+        android:background="@drawable/login_signup_background"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/upload_new_mentor"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/upload_vedio_addmentor"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/upload_new_mentor"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/upload_photo_newmentor"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nameViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:text="Name"
+            android:textColor="@color/white"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/signupName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:drawablePadding="5dp"
+            android:hint="Enter Name"
+            android:inputType="textPersonName"
+
+
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/darkGray"
+            android:textColorHint="@color/gray"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/descriptionViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:text="Description"
+            android:textColor="@color/white"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/newMentorDescription"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:drawablePadding="5dp"
+            android:hint="Enter Description"
+            android:inputType="textPersonName"
+
+
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/darkGray"
+            android:textColorHint="@color/gray"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:text="Status"
+            android:textColor="@color/white"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+
+        <Spinner
+            android:id="@+id/mentorStatus"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:clickable="true"
+
+            android:drawablePadding="5dp"
+            android:hint="Select Country"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
+
+            android:padding="5dp"
+            android:paddingStart="15dp"
+
+
+            android:popupBackground="@drawable/login_signup_button_background"
+            android:singleLine="true"
+            android:spinnerMode="dropdown"
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextContrastCheck,TouchTargetSizeCheck" />
+
+
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="@color/DarkCyan"
+            android:text="Upload"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/mainmenu_background"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom|center"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp">
+
+                <ImageButton
+                    android:id="@+id/homeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/home_icon"
+                    tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                <ImageButton
+                    android:id="@+id/searchButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/search_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="top">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/addmentor_button_background"
+                        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/addMentorButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+
+
+                        android:background="@drawable/addmentor_icon"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/chatButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/chat_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/profile_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

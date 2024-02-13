@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">i210523</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="countries_array">
+        <item>Select Country</item>
+        <item>Pakistan</item>
+        <item>India</item>
+        <item>Germany</item>
+        <item>USA</item>
+
+    </string-array>
+
+    <string-array name="Pakistan_city">
+        <item>Select City</item>
+        <item>Karachi</item>
+        <item>Lahore</item>
+        <item>Islamabad</item>
+        <item>Quetta</item>
+        <item>Peshawar</item>
+    </string-array>
+
+    <string-array name="India_city">
+        <item>Select City</item>
+        <item>Mumbai</item>
+        <item>Delhi</item>
+        <item>Bangalore</item>
+        <item>Hyderabad</item>
+        <item>Chennai</item>
+    </string-array>
+
+    <string-array name="Germany_city">
+        <item>Select City</item>
+        <item>Berlin</item>
+        <item>Hamburg</item>
+        <item>Munich</item>
+        <item>Frankfurt</item>
+        <item>Stuttgart</item>
+
+    </string-array>
+
+    <string-array name="USA_city">
+        <item>Select City</item>
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+        <item>Houston</item>
+        <item>Phoenix</item>
+    </string-array>
+
+    <string-array name="mentor_status">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
+
+</resources>
+

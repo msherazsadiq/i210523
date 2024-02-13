@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cyan">#DEF8F8</color>
+    <color name="moderate_cyan">#50C2C9</color>
+    <color name="gray">#858585</color>
+    <color name="Dark_moderate_cyan">#309587</color>
+    <color name="darkGray">#434343</color>
+    <color name="DarkCyan">#157177</color>
+    <color name="SoftCyan">#8FDADE</color>
+    <color name="Yellow">#ECB800</color>
+    <color name="lightGray">#DADADA</color>
+    <color name="DarkGreen">#3EAD00</color>
+    <color name="grayishCyan">#f0f4f3</color>
+    <color name="red">#D50000</color>
+</resources>

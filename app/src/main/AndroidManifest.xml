@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.I210523"
+        tools:targetApi="31">
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".VideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CommunityChat"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".MentorVideoCall"
+            android:exported="false" />
+        <activity
+            android:name=".MentorAudioCall"
+            android:exported="false" />
+        <activity
+            android:name=".MentorChat"
+            android:exported="false" />
+        <activity
+            android:name=".DropReview"
+            android:exported="false" />
+        <activity
+            android:name=".BookYourSession"
+            android:exported="false" />
+        <activity
+            android:name=".MentorProfile"
+            android:exported="false" />
+        <activity
+            android:name=".AboutMeMentor"
+            android:exported="false" />
+        <activity
+            android:name=".Chats"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewMentor"
+            android:exported="false" />
+        <activity
+            android:name=".SearchResults"
+            android:exported="false" />
+        <activity
+            android:name=".LetsFind"
+            android:exported="false" />
+        <activity
+            android:name=".BookedSession"
+            android:exported="false" />
+        <activity
+            android:name=".Notifications"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyContactNumber"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".splashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

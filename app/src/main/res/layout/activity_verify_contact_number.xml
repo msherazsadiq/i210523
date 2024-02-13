@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    tools:context=".VerifyContactNumber">
+
+
+    <ImageButton
+        android:id="@+id/backArrowButton"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="sans-serif-condensed-light"
+            android:singleLine="true"
+            android:text="Verify your phone Number"
+            android:textColor="@color/DarkCyan"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We’ve sent a code to"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/phoneNumberTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="+92 321 2242022"
+                android:textColor="@color/DarkCyan"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,InvalidId,RtlHardcoded" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/verification1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_verify_phone_number"
+                android:inputType="number"
+                android:paddingStart="25dp"
+                android:textColor="@color/DarkCyan"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/verification2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_verify_phone_number"
+                android:inputType="number"
+                android:paddingStart="25dp"
+                android:textColor="@color/DarkCyan"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/verification3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_verify_phone_number"
+                android:inputType="number"
+                android:paddingStart="25dp"
+                android:textColor="@color/DarkCyan"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/verification4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_verify_phone_number"
+                android:inputType="number"
+                android:paddingStart="25dp"
+                android:textColor="@color/DarkCyan"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/verification5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_verify_phone_number"
+                android:inputType="number"
+                android:paddingStart="25dp"
+                android:textColor="@color/DarkCyan"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/verifyButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/DarkCyan"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Verify"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/resendCodeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Resend Code Again"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+            <Button
+                android:id="@+id/resendCodeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="00.20"
+
+                android:textColor="@color/DarkCyan"
+                android:textSize="15sp"
+                android:textStyle="bold"
+
+
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/moderate_cyan"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/dailOneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/dailTwoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_marginLeft="40dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/dailThreeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/dailFourButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/dailFiveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_marginLeft="40dp"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/dailSixButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_marginLeft="40dp"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/dailSevenButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/dailEightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_marginLeft="40dp"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/dailNineButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_marginLeft="40dp"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="--"
+                android:textColor="@android:color/transparent"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck" />
+
+            <Button
+                android:id="@+id/dailZeroButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/SoftCyan"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <ImageButton
+                android:id="@+id/dailDeleteButton"
+                android:layout_width="90dp"
+                android:layout_height="85dp"
+
+                android:layout_marginLeft="30dp"
+
+                android:background="@drawable/dailpad_delete_icon"
+                tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

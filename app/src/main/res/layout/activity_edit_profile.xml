@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    tools:context=".EditProfile">
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@color/moderate_cyan"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/backArrowButton"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:singleLine="true"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/profilepicture_background" />
+
+
+        <TextView
+            android:id="@+id/nameViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:text="Name"
+            android:textColor="@color/DarkCyan"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/signupName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:drawablePadding="5dp"
+            android:hint="Enter Name"
+            android:inputType="textPersonName"
+
+
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/darkGray"
+            android:textColorHint="@color/gray"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/emailViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="Email"
+            android:textColor="@color/DarkCyan"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/signupEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:drawablePadding="5dp"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+
+
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#434343"
+            android:textColorHint="@color/gray"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/contactNumberViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="Contact Number"
+            android:textColor="@color/DarkCyan"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/signupContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:drawablePadding="5dp"
+            android:hint="Enter Contact Number"
+            android:inputType="number"
+
+
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#434343"
+            android:textColorHint="@color/gray"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/countryViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="Country"
+            android:textColor="@color/DarkCyan"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+
+        <Spinner
+            android:id="@+id/countryspinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:clickable="true"
+
+            android:drawablePadding="5dp"
+            android:hint="Select Country"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
+
+            android:padding="5dp"
+            android:paddingStart="15dp"
+
+
+            android:popupBackground="@drawable/login_signup_button_background"
+            android:singleLine="true"
+            android:spinnerMode="dropdown"
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextContrastCheck,TouchTargetSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/cityViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="City"
+            android:textColor="@color/DarkCyan"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <Spinner
+            android:id="@+id/cityspinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:clickable="true"
+
+            android:drawablePadding="5dp"
+            android:hint="Select Country"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
+
+            android:padding="5dp"
+            android:paddingStart="15dp"
+
+
+            android:popupBackground="@drawable/login_signup_button_background"
+            android:singleLine="true"
+            android:spinnerMode="dropdown"
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextContrastCheck,TouchTargetSizeCheck" />
+
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Update Profile"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/DarkCyan"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

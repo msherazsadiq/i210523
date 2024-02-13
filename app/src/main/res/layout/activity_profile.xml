@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    tools:context=".Profile">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="left"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="80dp"
+                android:orientation="horizontal"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/backArrowButton"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+
+                    android:background="@drawable/back_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:singleLine="true"
+                    android:text="My Profile"
+                    android:textColor="@color/DarkCyan"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="..."
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginLeft="200dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground1" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground2" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground1" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground2" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground1" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground2" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/profilebackground1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:layout_marginTop="-50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/editprofile1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/profilepicture_background" />
+
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/edit_background" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@drawable/edit_icon" />
+
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/editprofile2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="220dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/edit_background" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@drawable/edit_icon" />
+
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ali"
+                android:textColor="@color/DarkCyan"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.126"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Islamabad"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.126"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/bookedSessionButton"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="130dp"
+                android:background="@drawable/booked_session_button"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite Mentore"
+                android:textColor="@color/DarkCyan"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="John Cooper"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="$1500/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UX Designer @ Google"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/available_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Available"
+                                            android:textColor="@color/DarkGreen"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@drawable/redheart" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                    <!-- ============================ -->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Emma Phillips"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="$500/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Lead - Technology Officer"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/available_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Available"
+                                            android:textColor="@color/DarkGreen"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@drawable/redheart" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- ============================ -->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Martina Watson"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="$500/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Lead - Technology Officer"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/notavailable_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Not Available"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@drawable/grayheart" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Reviews"
+                android:textColor="@color/DarkCyan"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="0dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/review_background"/>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="100dp"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="John Cooper"
+                                android:textColor="@color/white"
+                                android:textSize="13dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/rating_stars1"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="John provided excellent\nPrototyping Techniques\nand insights. I highly\nrecommend him!"
+                                android:textColor="@color/darkGray"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <!-- ============================= -->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/review_background"/>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="100dp"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Emma Phillips"
+                                android:textColor="@color/white"
+                                android:textSize="13dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/rating_stars2"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Her tips were valuable.\nWould love to connect\nagain."
+                                android:textColor="@color/darkGray"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <!-- ============================= -->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/review_background"/>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="100dp"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jane"
+                                android:textSize="13dp"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/rating_stars3"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Impressive Session"
+                                android:textColor="@color/darkGray"
+                                android:textSize="10dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/mainmenu_background"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom|center"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp">
+
+                <ImageButton
+                    android:id="@+id/homeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/home_icon"
+                    tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                <ImageButton
+                    android:id="@+id/searchButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/search_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="top">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/addmentor_button_background"
+                        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/addMentorButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+
+
+                        android:background="@drawable/addmentor_icon"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/chatButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/chat_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/atprofile_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

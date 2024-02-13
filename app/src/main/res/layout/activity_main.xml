@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/cyan"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/loginCorner"
+        android:layout_width="192dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/corner"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello,"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Ali"
+            android:textColor="@color/DarkCyan"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <ImageButton
+            android:id="@+id/notificationButton"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="180dp"
+            android:background="@drawable/notification_icon"
+            tools:ignore="ContentDescription,RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="410dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="112dp"
+        android:paddingStart="20dp"
+        android:text="Ready for mentorship? Let’s begin the journey"
+        android:textColor="@color/DarkCyan"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:scrollbarSize="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/DarkCyan"
+                android:text="All"
+                android:textColor="@color/white"
+                tools:ignore="ButtonStyle,HardcodedText,TouchTargetSizeCheck" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/SoftCyan"
+                android:text="Education"
+                android:textColor="@color/DarkCyan"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,TextContrastCheck,TouchTargetSizeCheck" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/SoftCyan"
+                android:text="Entrepreneurship"
+                android:textColor="@color/DarkCyan"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,TextContrastCheck,TouchTargetSizeCheck,TextSizeCheck" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/SoftCyan"
+                android:text="Personal Growth"
+                android:textColor="@color/DarkCyan"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/SoftCyan"
+                android:text="Career"
+                android:textColor="@color/DarkCyan"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="0dp"
+
+        android:layout_marginTop="195dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+                tools:ignore="MissingConstraints,RtlSymmetry">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Top Mentors for you"
+                    android:textColor="@color/DarkCyan"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:background="@android:color/transparent"
+                    android:text="View All"
+                    android:textColor="@color/DarkCyan"
+                    android:textSize="12dp"
+                    tools:ignore="ButtonStyle,HardcodedText,TextContrastCheck,TouchTargetSizeCheck,TextSizeCheck" />
+
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="John Cooper"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="$1500/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UX Designer @ Google"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/available_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Available"
+                                            android:textColor="@color/DarkGreen"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@drawable/redheart" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                    <!-- ============================ -->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Martina Watson"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="$500/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Lead - Technology Officer"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/notavailable_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Not Available"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@drawable/grayheart" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+                tools:ignore="MissingConstraints,RtlSymmetry">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Education Mentors"
+                    android:textColor="@color/DarkCyan"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:background="@android:color/transparent"
+                    android:text="View All"
+                    android:textColor="@color/DarkCyan"
+                    android:textSize="12dp"
+                    tools:ignore="ButtonStyle,HardcodedText,TextContrastCheck,TouchTargetSizeCheck,TextSizeCheck" />
+
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Michael Drake"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="$900/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="NLP Expert"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="16dp"
+                                            android:background="@drawable/available_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Available"
+                                            android:textColor="@color/DarkGreen"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="55dp"
+                                    android:background="@drawable/redheart" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+
+
+                    <!-- ============================ -->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Alex"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="60dp"
+                                    android:text="$200/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,RtlHardcoded,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Andoid Developer"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/notavailable_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Not Available"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@drawable/grayheart" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+                tools:ignore="MissingConstraints,RtlSymmetry">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Recent Mentors"
+                    android:textColor="@color/DarkCyan"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="140dp"
+                    android:background="@android:color/transparent"
+                    android:text="View All"
+                    android:textColor="@color/DarkCyan"
+                    android:textSize="12dp"
+                    tools:ignore="ButtonStyle,HardcodedText,TextContrastCheck,TouchTargetSizeCheck,TextSizeCheck" />
+
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Emma"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="60dp"
+                                    android:text="1200/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Lead - Corporate"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/available_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Available"
+                                            android:textColor="@color/DarkGreen"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="35dp"
+                                    android:background="@drawable/redheart" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                    <!-- ============================ -->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mentors_background"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+                            tools:layout_editor_absoluteX="4dp"
+                            tools:layout_editor_absoluteY="248dp" />
+
+                        <ImageButton
+                            android:layout_width="180dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="10dp"
+
+                            android:background="@drawable/mentor_pictureinpicture"
+                            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jane"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="70dp"
+                                    android:text="$700/Session"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="7dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Software Engineer"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp"
+                                        tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:background="@drawable/notavailable_circle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Not Available"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText,TextSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:background="@drawable/grayheart" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/mainmenu_background"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom|center"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp">
+
+                <ImageButton
+                    android:id="@+id/homeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/athome_icon"
+                    tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                <ImageButton
+                    android:id="@+id/searchButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/search_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="top">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/addmentor_button_background"
+                        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/addMentorButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+
+
+                        android:background="@drawable/addmentor_icon"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/chatButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/chat_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/profile_icon"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
