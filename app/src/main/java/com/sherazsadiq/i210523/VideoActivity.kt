@@ -11,6 +11,7 @@ class VideoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_video)
 
+
         val camBackBtn = findViewById<ImageView>(R.id.camera_back)
         camBackBtn.setOnClickListener {
             onBackPressed()

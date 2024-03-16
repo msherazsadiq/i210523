@@ -5,8 +5,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -23,7 +21,7 @@ class VerifyContactNumber : AppCompatActivity() {
 
         val backArrow = findViewById<ImageButton>(R.id.backArrowButton)
         backArrow.setOnClickListener {
-            val intent = Intent(this, SignUp::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -66,7 +64,7 @@ class VerifyContactNumber : AppCompatActivity() {
 
         val verifybutton = findViewById<TextView>(R.id.verifyButton)
         verifybutton.setOnClickListener {
-            val intent = Intent(this, login::class.java)
+            val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -99,6 +97,9 @@ class VerifyContactNumber : AppCompatActivity() {
             countDownTimer.start()
             Toast.makeText(this, "Code has been resent", Toast.LENGTH_SHORT).show()
         }
+
+
+
 
 
 

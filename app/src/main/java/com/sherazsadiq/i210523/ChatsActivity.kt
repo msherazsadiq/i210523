@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.LinearLayout
 
-class Chats : AppCompatActivity() {
+class ChatsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chats)
@@ -20,7 +20,7 @@ class Chats : AppCompatActivity() {
 
         val chat1 = findViewById<LinearLayout>(R.id.johnCopperChat)
         chat1.setOnClickListener {
-            val intent = Intent(this, MentorChat::class.java)
+            val intent = Intent(this, MentorChatActivity::class.java)
             startActivity(intent)
         }
 
@@ -53,14 +53,14 @@ class Chats : AppCompatActivity() {
 
         val chat_Button = findViewById<ImageButton>(R.id.chatButton)
         chat_Button.setOnClickListener {
-            val intent = Intent(this, Chats::class.java)
+            val intent = Intent(this, ChatsActivity::class.java)
             startActivity(intent)
 
         }
 
         val profile_Button = findViewById<ImageButton>(R.id.profileButton)
         profile_Button.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
 
         }

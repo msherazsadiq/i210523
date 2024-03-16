@@ -20,7 +20,7 @@ class SearchResults : AppCompatActivity() {
 
         val gotoMentor1 = findViewById<LinearLayout>(R.id.sample1Goto)
         gotoMentor1.setOnClickListener {
-            val intent = Intent(this, MentorProfile::class.java)
+            val intent = Intent(this, MentorProfileActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -51,14 +51,14 @@ class SearchResults : AppCompatActivity() {
 
         val chat_Button = findViewById<ImageButton>(R.id.chatButton)
         chat_Button.setOnClickListener {
-            val intent = Intent(this, Chats::class.java)
+            val intent = Intent(this, ChatsActivity::class.java)
             startActivity(intent)
 
         }
 
         val profile_Button = findViewById<ImageButton>(R.id.profileButton)
         profile_Button.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
 
         }

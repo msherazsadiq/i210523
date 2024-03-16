@@ -20,7 +20,7 @@ class ForgotPassword : AppCompatActivity() {
 
         val sendEmail = findViewById<Button>(R.id.emailSendButton)
         sendEmail.setOnClickListener {
-            val intent = Intent(this, ResetPassword::class.java)
+            val intent = Intent(this, ResetPasswordActivity::class.java)
             startActivity(intent)
             finish()
         }

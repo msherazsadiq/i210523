@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/cyan"
     android:orientation="vertical"
-    tools:context=".Chats">
+    tools:context=".ChatsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/cyan"
-        tools:context=".SignUp">
+        tools:context=".SignUpActivity">
 
         <ImageView
             android:id="@+id/signupLogo"
@@ -187,7 +187,7 @@
 
 
             <Spinner
-                android:id="@+id/countryspinner"
+                android:id="@+id/signup_countryspinner"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="15dp"
@@ -226,7 +226,7 @@
                 tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
 
             <Spinner
-                android:id="@+id/cityspinner"
+                android:id="@+id/signup_cityspinner"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="15dp"
@@ -265,7 +265,7 @@
                 tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
 
             <EditText
-                android:id="@+id/signuppassword"
+                android:id="@+id/signupPassword"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="15dp"

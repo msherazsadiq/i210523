@@ -15,35 +15,35 @@ class BookYourSession : AppCompatActivity() {
 
         val back_arrow = findViewById<ImageButton>(R.id.backArrowButton)
         back_arrow.setOnClickListener {
-            val intent = Intent(this, MentorProfile::class.java)
+            val intent = Intent(this, MentorProfileActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         val chatBtn = findViewById<ImageButton>(R.id.chatButton)
         chatBtn.setOnClickListener {
-            val intent = Intent(this, MentorChat::class.java)
+            val intent = Intent(this, MentorChatActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         val phoneBtn = findViewById<ImageButton>(R.id.phoneButton)
         phoneBtn.setOnClickListener {
-            val intent = Intent(this, MentorAudioCall::class.java)
+            val intent = Intent(this, MentorAudioCallActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         val videoBtn = findViewById<ImageButton>(R.id.videoCallButton)
         videoBtn.setOnClickListener {
-            val intent = Intent(this, MentorVideoCall::class.java)
+            val intent = Intent(this, MentorVideoCallActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         val bookBtn = findViewById<Button>(R.id.bookAppointmentButton)
         bookBtn.setOnClickListener {
-            val intent = Intent(this, MentorProfile::class.java)
+            val intent = Intent(this, MentorProfileActivity::class.java)
             startActivity(intent)
             finish()
         }

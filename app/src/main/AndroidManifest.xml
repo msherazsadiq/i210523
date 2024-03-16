@@ -2,6 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +32,7 @@
         android:theme="@style/Theme.I210523"
         tools:targetApi="31">
         <activity
-            android:name=".EditProfile"
+            android:name=".EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".VideoActivity"
@@ -25,16 +44,16 @@
             android:name=".CommunityChat"
             android:exported="false" />
         <activity
-            android:name=".Profile"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".MentorVideoCall"
+            android:name=".MentorVideoCallActivity"
             android:exported="false" />
         <activity
-            android:name=".MentorAudioCall"
+            android:name=".MentorAudioCallActivity"
             android:exported="false" />
         <activity
-            android:name=".MentorChat"
+            android:name=".MentorChatActivity"
             android:exported="false" />
         <activity
             android:name=".DropReview"
@@ -43,13 +62,10 @@
             android:name=".BookYourSession"
             android:exported="false" />
         <activity
-            android:name=".MentorProfile"
+            android:name=".MentorProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutMeMentor"
-            android:exported="false" />
-        <activity
-            android:name=".Chats"
+            android:name=".ChatsActivity"
             android:exported="false" />
         <activity
             android:name=".AddNewMentor"
@@ -61,13 +77,13 @@
             android:name=".LetsFind"
             android:exported="false" />
         <activity
-            android:name=".BookedSession"
+            android:name=".BookedSessionActivity"
             android:exported="false" />
         <activity
-            android:name=".Notifications"
+            android:name=".NotificationsActivity"
             android:exported="false" />
         <activity
-            android:name=".ResetPassword"
+            android:name=".ResetPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".ForgotPassword"
@@ -76,13 +92,13 @@
             android:name=".VerifyContactNumber"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".login"
             android:exported="false" />
         <activity
-            android:name=".splashScreen"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

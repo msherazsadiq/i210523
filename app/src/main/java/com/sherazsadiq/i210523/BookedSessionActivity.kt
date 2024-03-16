@@ -4,15 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 
-class MentorAudioCall : AppCompatActivity() {
+class BookedSessionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mentor_audio_call)
+        setContentView(R.layout.activity_booked_session)
 
-        val callEndBtn = findViewById<ImageButton>(R.id.mentor_audio_call_end)
-        callEndBtn.setOnClickListener {
+        val backBtn = findViewById<ImageButton>(R.id.backArrowButton)
+        backBtn.setOnClickListener {
             finish()
-
         }
+
     }
 }

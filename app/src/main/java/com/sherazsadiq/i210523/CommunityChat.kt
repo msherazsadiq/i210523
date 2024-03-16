@@ -23,14 +23,14 @@ class CommunityChat : AppCompatActivity() {
 
         val phoneBtn = findViewById<ImageButton>(R.id.phoneCallButton)
         phoneBtn.setOnClickListener {
-            val intent = Intent(this, MentorAudioCall::class.java)
+            val intent = Intent(this, MentorAudioCallActivity::class.java)
             startActivity(intent)
 
         }
 
         val videBtn = findViewById<ImageButton>(R.id.videoCallButton)
         videBtn.setOnClickListener {
-            val intent = Intent(this, MentorVideoCall::class.java)
+            val intent = Intent(this, MentorVideoCallActivity::class.java)
             startActivity(intent)
 
         }
@@ -78,14 +78,14 @@ class CommunityChat : AppCompatActivity() {
 
         val chat_Button = findViewById<ImageButton>(R.id.chatButton)
         chat_Button.setOnClickListener {
-            val intent = Intent(this, Chats::class.java)
+            val intent = Intent(this, ChatsActivity::class.java)
             startActivity(intent)
 
         }
 
         val profile_Button = findViewById<ImageButton>(R.id.profileButton)
         profile_Button.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
 
         }

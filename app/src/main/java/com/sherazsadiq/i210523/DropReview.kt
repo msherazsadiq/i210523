@@ -21,7 +21,7 @@ class DropReview : AppCompatActivity() {
 
         val submit = findViewById<Button>(R.id.submitfeedbackbutton)
         submit.setOnClickListener {
-            val intent = Intent(this, MentorProfile::class.java)
+            val intent = Intent(this, MentorProfileActivity::class.java)
             startActivity(intent)
             finish()
         }
