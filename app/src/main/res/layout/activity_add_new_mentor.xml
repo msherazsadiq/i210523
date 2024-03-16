@@ -104,12 +104,14 @@
                 >
 
                 <ImageView
+                    android:id="@+id/uplaodMentorVideo"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
                     android:background="@drawable/upload_new_mentor"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
+                    android:id="@+id/uploadMentorVideoButton"
                     android:layout_width="140dp"
                     android:layout_height="70dp"
                     android:layout_marginLeft="3dp"
@@ -124,12 +126,14 @@
                 android:layout_marginLeft="20dp">
 
                 <ImageButton
+                    android:id="@+id/uploadMentorPhoto"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
                     android:background="@drawable/upload_new_mentor"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
+                    android:id="@+id/uploadMentorPhotoButton"
                     android:layout_width="140dp"
                     android:layout_height="70dp"
                     android:layout_marginLeft="3dp"
@@ -157,7 +161,7 @@
             tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
 
         <EditText
-            android:id="@+id/signupName"
+            android:id="@+id/newMentorName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
@@ -205,6 +209,41 @@
             android:hint="Enter Description"
             android:inputType="textPersonName"
 
+
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/darkGray"
+            android:textColorHint="@color/gray"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/priceViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:text="Session Price"
+            android:textColor="@color/white"
+
+            android:textSize="15dp"
+
+            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/newMentorPrice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_signup_button_background"
+
+            android:drawablePadding="5dp"
+            android:hint="Enter Price"
+            android:inputType="text|number"
 
             android:minHeight="48dp"
             android:padding="5dp"

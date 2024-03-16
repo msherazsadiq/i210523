@@ -59,6 +59,7 @@
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <SearchView
+            android:id="@+id/searchbar"
             style="@android:style/Widget.Material.Light.SearchView"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -69,7 +70,7 @@
             android:iconifiedByDefault="false"
             android:orientation="horizontal"
             android:queryHint="Search"
-            android:searchHintIcon="@color/DarkCyan"
+            android:searchHintIcon="@color/DarkGreen"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             tools:ignore="MissingConstraints" />
 

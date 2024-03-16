@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.SearchView
 import android.widget.TextView
 
 class LetsFind : AppCompatActivity() {
@@ -11,11 +12,22 @@ class LetsFind : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lets_find)
 
-        val gotoMentor1 = findViewById<TextView>(R.id.mentor1)
-        gotoMentor1.setOnClickListener {
-            val intent = Intent(this, SearchResults::class.java)
-            startActivity(intent)
-        }
+        val searchText = findViewById<SearchView>(R.id.searchbar)
+        searchText.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                val intent = Intent(this@LetsFind, SearchResults::class.java)
+                intent.putExtra("searchText", query)
+                startActivity(intent)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                // This method can be used to update the list as the user types in the SearchView.
+                // For now, we leave it empty as we're not implementing this functionality.
+                return false
+            }
+        })
+
 
         val back_arrow = findViewById<ImageButton>(R.id.backArrowButton)
         back_arrow.setOnClickListener {

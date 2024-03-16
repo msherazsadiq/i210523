@@ -5,11 +5,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class SearchResults : AppCompatActivity() {
+
+    private lateinit var adapter: SearchMentorAdapter
+    private val mentors = mutableListOf<Mentor>()
+    private val databaseRef = FirebaseDatabase.getInstance().getReference("Users")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_results)
+
+        val myRecyclerview = findViewById<RecyclerView>(R.id.SearchMentorRecyclerView)
+        adapter = SearchMentorAdapter(mentors)
+        myRecyclerview.layoutManager = LinearLayoutManager(this)
+        myRecyclerview.adapter = adapter
+
+        val searchT = intent.getStringExtra("searchText")
+        readDatabase(searchT)
+
 
         val back_arrow = findViewById<ImageButton>(R.id.backArrowButton)
         back_arrow.setOnClickListener {
@@ -17,16 +37,6 @@ class SearchResults : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
-        val gotoMentor1 = findViewById<LinearLayout>(R.id.sample1Goto)
-        gotoMentor1.setOnClickListener {
-            val intent = Intent(this, MentorProfileActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-
-
 
         val home_Button = findViewById<ImageButton>(R.id.homeButton)
         home_Button.setOnClickListener {
@@ -69,4 +79,37 @@ class SearchResults : AppCompatActivity() {
 
 
     }
+
+    private fun readDatabase(searchText: String?) {
+        databaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                dataSnapshot.children.forEach { snapshot ->
+                    val mentorInfo = snapshot.child("MentorInfo").getValue(Mentor::class.java)
+                    if (mentorInfo != null) {
+                        val mentor = Mentor(
+                            mentorInfo.name,
+                            mentorInfo.description,
+                            mentorInfo.status,
+                            mentorInfo.sessionPrice,
+                            mentorInfo.mentorPicture,
+                            mentorInfo.mentorVideo
+                        )
+                        mentors.add(mentor)
+                    }
+                }
+                val filteredMentors = if(searchText != null){
+                    mentors.filter { it.name.contains(searchText, ignoreCase = true) }
+                } else {
+                    mentors
+                }
+                adapter.updateMentors(filteredMentors)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle database error
+            }
+        })
+    }
+
+
 }
