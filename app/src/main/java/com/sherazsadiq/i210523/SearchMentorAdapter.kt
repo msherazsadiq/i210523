@@ -1,5 +1,6 @@
 package com.sherazsadiq.i210523
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,15 +11,28 @@ import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.CornerFamily
 
+
 class SearchMentorAdapter(private var mentors: MutableList<Mentor>) : RecyclerView.Adapter<SearchMentorAdapter.MentorViewHolder>() {
     private var filteredMentors: MutableList<Mentor> = mentors.toMutableList()
 
-    class MentorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MentorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val mentorName: TextView = itemView.findViewById(R.id.searchMentorName)
         val mentorDescription: TextView = itemView.findViewById(R.id.searchMentorDescription)
         val mentorStatus: TextView = itemView.findViewById(R.id.searchMentorAvailability)
         val mentorPrice: TextView = itemView.findViewById(R.id.searchMentorPrice)
         val mentorImage: ShapeableImageView = itemView.findViewById(R.id.searchMentorImage)
+
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val clickedMentor: Mentor? = mentors[position]
+                    val intent = Intent(itemView.context, MentorProfileActivity::class.java)
+                    intent.putExtra("mentor", clickedMentor)
+                    itemView.context.startActivity(intent)
+                }
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MentorViewHolder {

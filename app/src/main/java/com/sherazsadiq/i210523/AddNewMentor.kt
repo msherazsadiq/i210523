@@ -19,6 +19,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.storage
+import java.io.Serializable
 import java.util.UUID
 
 data class Mentor(
@@ -29,7 +30,7 @@ data class Mentor(
     val mentorPicture: String? = "",
     val mentorVideo: String? = ""
 
-)
+) : Serializable
 
 class AddNewMentor : AppCompatActivity() {
 

@@ -6,12 +6,32 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
 
 class BookYourSession : AppCompatActivity() {
-    @SuppressLint("WrongViewCast", "MissingInflatedId")
+
+    var mentorMe: Mentor? = null
+    @SuppressLint("WrongViewCast", "MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_your_session)
+
+        mentorMe = intent.getSerializableExtra("mentor") as Mentor
+
+        val mentorNameText = findViewById<TextView>(R.id.mentorName)
+        mentorNameText.text = mentorMe?.name
+
+        val mentorPic = mentorMe?.mentorPicture
+        val mentorProfileImage = findViewById<ImageView>(R.id.mentorProfilePicture)
+        Glide.with(this@BookYourSession).load(mentorPic)
+            .centerCrop()
+            .circleCrop()
+            .into(mentorProfileImage)
+
+        val mentorSessionPriceText = findViewById<TextView>(R.id.mentorSessionPrice)
+        mentorSessionPriceText.text = "$" + mentorMe?.sessionPrice + "/Session"
 
         val back_arrow = findViewById<ImageButton>(R.id.backArrowButton)
         back_arrow.setOnClickListener {
