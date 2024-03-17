@@ -32,6 +32,9 @@ class MentorProfileActivity : AppCompatActivity() {
         val mentorDescriptionText = findViewById<TextView>(R.id.mentorDescription)
         mentorDescriptionText.text = mentorMe?.description
 
+        val mentorRatingText = findViewById<TextView>(R.id.mentorRating)
+        mentorRatingText.text = mentorMe?.rating.toString()
+
 
 
         val back_arrow = findViewById<ImageButton>(R.id.backArrowButton)
@@ -43,7 +46,9 @@ class MentorProfileActivity : AppCompatActivity() {
 
         val drop_review = findViewById<ImageButton>(R.id.dropReviewButton)
         drop_review.setOnClickListener {
+            val clickedMentor: Mentor? = mentorMe
             val intent = Intent(this, DropReview::class.java)
+            intent.putExtra("mentor", clickedMentor)
             startActivity(intent)
             finish()
         }

@@ -99,6 +99,7 @@
                     android:gravity="top"
                     android:orientation="horizontal">
                     <ImageView
+
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:background="@drawable/rating_star"
@@ -106,6 +107,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/mentorRating"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4.8"
@@ -199,27 +201,32 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/timeSlot1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10.00 AM"
-                    android:textColor="@color/black"
-                    android:background="@android:color/transparent"/>
-
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="10.00 AM"
+                    android:text="8:00 AM"
                     android:textColor="@color/black"
                     android:backgroundTint="@color/moderate_cyan"/>
 
 
                 <Button
+                    android:id="@+id/timeSlot2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.00 AM"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/moderate_cyan"/>
+
+
+                <Button
+                    android:id="@+id/timeSlot3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12.00 PM"
                     android:textColor="@color/black"
-                    android:background="@android:color/transparent"/>
+                    android:backgroundTint="@color/moderate_cyan"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

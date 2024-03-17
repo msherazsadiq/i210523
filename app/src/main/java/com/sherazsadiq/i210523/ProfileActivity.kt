@@ -108,6 +108,14 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun logout(){
         auth.signOut()
+
+        // Clear the SharedPreferences
+        val sharedPreferencesPicture: SharedPreferences = getSharedPreferences("ProfilePicture", Context.MODE_PRIVATE)
+        sharedPreferencesPicture.edit().clear().apply()
+
+        val sharedPreferencesInfo: SharedPreferences = getSharedPreferences("UserInfo", Context.MODE_PRIVATE)
+        sharedPreferencesInfo.edit().clear().apply()
+
     }
 
 

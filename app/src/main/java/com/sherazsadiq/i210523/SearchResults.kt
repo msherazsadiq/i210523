@@ -92,7 +92,10 @@ class SearchResults : AppCompatActivity() {
                             mentorInfo.status,
                             mentorInfo.sessionPrice,
                             mentorInfo.mentorPicture,
-                            mentorInfo.mentorVideo
+                            mentorInfo.mentorVideo,
+                            mentorInfo.mentorID,
+                            mentorInfo.rating
+
                         )
                         mentors.add(mentor)
                     }

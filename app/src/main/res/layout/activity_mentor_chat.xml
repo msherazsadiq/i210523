@@ -257,9 +257,9 @@
         <ImageButton
             android:id="@+id/audioButton"
             android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="3dp"
+            android:layout_height="15dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
             android:background="@drawable/voice_recorder_icon"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 

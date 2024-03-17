@@ -35,17 +35,36 @@
             android:paddingTop="10dp"
             tools:ignore="ExtraText">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:lineSpacingExtra="10dp"
-                android:text="Hi, I'm\nJohn Cooper"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, I'm"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:lineSpacingExtra="10dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/mentorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Cooper"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:lineSpacingExtra="10dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
 
             <ImageView
+                android:id="@+id/mentorProfilePicture"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="80dp"
@@ -84,6 +103,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:id="@+id/feedBackBox"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@drawable/searchbar"
@@ -98,6 +118,7 @@
 
 
         <RatingBar
+            android:id="@+id/ratingBar"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -107,7 +128,7 @@
             android:padding="5dp"
             android:progressTint="@color/Yellow"
             android:progress="1"
-            android:stepSize="1"
+            android:stepSize="0.5"
             android:rating="0"
             tools:ignore="RtlHardcoded" />
 

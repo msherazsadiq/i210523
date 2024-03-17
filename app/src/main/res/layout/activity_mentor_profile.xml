@@ -113,6 +113,7 @@
                         android:layout_marginTop="10dp"/>
 
                     <TextView
+                        android:id="@+id/mentorRating"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4.8"

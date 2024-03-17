@@ -28,7 +28,9 @@ data class Mentor(
     val status: String = "",
     val sessionPrice: String = "",
     val mentorPicture: String? = "",
-    val mentorVideo: String? = ""
+    val mentorVideo: String? = "",
+    val mentorID: String = "",
+    val rating: Float = 0.0f
 
 ) : Serializable
 
@@ -170,10 +172,20 @@ class AddNewMentor : AppCompatActivity() {
         val mentorStatus = mentor_status.selectedItem.toString()
         val mentorSessionPrice = findViewById<TextView>(R.id.newMentorPrice)
 
-        val mentor = Mentor(mentorName.text.toString(), mentorDescription.text.toString(), mentorStatus, mentorSessionPrice.text.toString(), mentorPictureURI, mentorVideoURI)
-        // store mentor in database
-
         val user = FirebaseAuth.getInstance().currentUser
+
+        val mentor = Mentor(
+            mentorName.text.toString(),
+            mentorDescription.text.toString(),
+            mentorStatus,
+            mentorSessionPrice.text.toString(),
+            mentorPictureURI,
+            mentorVideoURI,
+            user!!.uid,
+            0.0f
+        )
+
+
         val userRef = databaseRef.child(user!!.uid).child("MentorInfo").setValue(mentor)
 
 
