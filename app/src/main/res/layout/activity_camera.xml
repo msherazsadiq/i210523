@@ -8,6 +8,7 @@
     tools:context=".CameraActivity">
 
     <LinearLayout
+        android:id="@+id/cameraViewLayout"
         android:layout_width="match_parent"
         android:layout_height="465dp"
         android:layout_marginTop="70dp"

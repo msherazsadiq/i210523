@@ -80,10 +80,11 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TextSizeCheck" />
 
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCommunityView"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@drawable/chat_online_bar" />
+            android:scrollbars="horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,148 +100,13 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TextSizeCheck" />
 
-        <LinearLayout
-            android:id="@+id/johnCopperChat"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerchatView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/chat_icon1" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="John Cooper"
-                    android:textColor="@color/DarkCyan"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="1 New Message"
-                    android:textColor="@color/red"
-                    android:textSize="10dp"
-                    tools:ignore="TextSizeCheck" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <!-- ============================================= -->
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/moderate_cyan"
-            tools:ignore="RtlHardcoded" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/chat_icon2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jack Watson"
-                    android:textColor="@color/DarkCyan"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="No New Message"
-                    android:textColor="@color/darkGray"
-                    android:textSize="10dp"
-                    tools:ignore="TextSizeCheck" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- ============================================= -->
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/moderate_cyan"
-            tools:ignore="RtlHardcoded" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/chat_icon3" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Emma Phillips"
-                    android:textColor="@color/DarkCyan"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="No New Message"
-                    android:textColor="@color/darkGray"
-                    android:textSize="10dp"
-                    tools:ignore="TextSizeCheck" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- ============================================= -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/moderate_cyan"
-            tools:ignore="RtlHardcoded" />
 
 
     </LinearLayout>

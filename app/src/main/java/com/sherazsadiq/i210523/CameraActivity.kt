@@ -23,5 +23,52 @@ class CameraActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        /*
+        // Assuming you have buttons with the IDs camera_photo, camera_slo_mo, camera_square, and camera_portrait
+        val photoButton: Button = findViewById(R.id.camera_photo)
+        photoButton.setOnClickListener {
+            // Implement photo capture functionality
+            capturePhoto()
+        }
+
+
+        val sloMoButton: Button = findViewById(R.id.camera_slo_mo)
+        sloMoButton.setOnClickListener {
+            // Implement slo-mo functionality
+            captureSloMo()
+        }
+
+        val squareButton: Button = findViewById(R.id.camera_square)
+        squareButton.setOnClickListener {
+            // Implement square photo capture functionality
+            captureSquarePhoto()
+        }
+
+        val portraitButton: Button = findViewById(R.id.camera_portrait)
+        portraitButton.setOnClickListener {
+            // Implement portrait photo capture functionality
+            capturePortraitPhoto()
+        }
+
+         */
     }
+
+    /*
+    private fun capturePhoto() {
+        // Implement photo capture functionality
+    }
+
+    private fun captureSloMo() {
+        // Implement slo-mo functionality
+    }
+
+    private fun captureSquarePhoto() {
+        // Implement square photo capture functionality
+    }
+
+    private fun capturePortraitPhoto() {
+        // Implement portrait photo capture functionality
+    }
+
+     */
 }

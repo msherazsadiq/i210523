@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="right"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingStart="130dp"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/single_message_bg"
+            android:text="How was your experience with his\nmentoring? Satisfied?"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingEnd="15dp"
+            android:text="10:30"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

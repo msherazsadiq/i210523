@@ -56,6 +56,8 @@ class EditProfileActivity : AppCompatActivity() {
 
         val backBtn = findViewById<ImageButton>(R.id.backArrowButton)
         backBtn.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
             finish()
         }
 

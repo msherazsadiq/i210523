@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleObserver
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import java.io.Serializable
 
 data class User(
     val name: String = "",
@@ -24,8 +25,9 @@ data class User(
     val country: String = "",
     val city: String = "",
     val password: String = "",
-    val profilePicture: String? = ""
-)
+    val profilePicture: String? = "",
+    val id: String = ""
+): Serializable
 
 
 class SignUpActivity : AppCompatActivity(), LifecycleObserver {
@@ -40,6 +42,7 @@ class SignUpActivity : AppCompatActivity(), LifecycleObserver {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
 
         countrySpinner = findViewById(R.id.signup_countryspinner)
         citySpinner = findViewById(R.id.signup_cityspinner)
@@ -172,10 +175,12 @@ class SignUpActivity : AppCompatActivity(), LifecycleObserver {
                 if (task.isSuccessful) {
                     Log.d("TAG", "createUserWithEmail:success")
                     val user = auth.currentUser
+                    val id = user?.uid.toString()
                     Toast.makeText(baseContext, "User registered successfully.", Toast.LENGTH_SHORT).show()
-                    storeInDatabase(name, email, contactNumber, country, city, password)
+                    storeInDatabase(name, email, contactNumber, country, city, password, id)
                     val intent = Intent(this, EditProfileActivity::class.java)
                     startActivity(intent)
+                    finish()
 
                 } else {
                     Log.w("TAG", "createUserWithEmail:failure", task.exception)
@@ -184,11 +189,11 @@ class SignUpActivity : AppCompatActivity(), LifecycleObserver {
             }
     }
 
-    private fun storeInDatabase(name: String, email: String, contactNumber: String, country: String, city: String, password: String) {
+    private fun storeInDatabase(name: String, email: String, contactNumber: String, country: String, city: String, password: String, id: String) {
         val database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("Users")
 
-        val user = User(name, email, contactNumber, country, city, password, "")
+        val user = User(name, email, contactNumber, country, city, password, "", id)
         myRef.child(auth.currentUser?.uid.toString()).child("UserInfo").setValue(user)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

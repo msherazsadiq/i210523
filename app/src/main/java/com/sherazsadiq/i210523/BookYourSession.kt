@@ -13,7 +13,10 @@ import android.widget.TextView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 data class Session(
     var clientID: String? = null,
@@ -149,6 +152,29 @@ class BookYourSession : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Failed to store data: ${task.exception?.message}", Toast.LENGTH_LONG).show()
             }
+        }
+
+        addChat(mentorId)
+        newSessionRef.setValue(session)
+    }
+
+    private fun addChat(Mentor_id: String) {
+        val user = FirebaseAuth.getInstance().currentUser
+        val userId = user?.uid
+        if (userId != null && Mentor_id != null) {
+            val userChatRef = FirebaseDatabase.getInstance().getReference("Users").child(userId).child("chat")
+            userChatRef.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (!dataSnapshot.children.any { it.value == Mentor_id }) {
+                        // If the mentor's ID does not exist in the chat node, push the new ID
+                        userChatRef.push().setValue(Mentor_id)
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // Handle possible errors.
+                }
+            })
         }
     }
 }

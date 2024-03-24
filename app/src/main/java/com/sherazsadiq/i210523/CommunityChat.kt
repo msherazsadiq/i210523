@@ -1,19 +1,46 @@
 package com.sherazsadiq.i210523
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.TextView
+import com.bumptech.glide.Glide
 
-class CommunityChat : AppCompatActivity() {
+data class message(
+    var message: String? = "",
+    val sender: String? = "",
+    val receiver: String? = "",
+    val time: String? = ""
+)
+
+var mentor_c: Mentor? = null
+class CommunityChat<ImageView : Any> : AppCompatActivity() {
 
     private val REQUEST_IMAGE_CAPTURE = 1
     private val REQUEST_FILE_PICKER = 2
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_community_chat)
+
+        mentor_c = intent.getSerializableExtra("mentor") as Mentor
+        val com_name: TextView = findViewById(R.id.CommunityName)
+        com_name.text = mentor_c?.name+"'s"
+
+        /*
+        val profilePicture = mentor_c?.mentorPicture
+        val profileImage: ImageView = findViewById(R.id.CommunityProfile)
+        Glide.with(this@CommunityChat).load(profilePicture)
+            .centerCrop()
+            .circleCrop()
+            .into(profileImage)
+
+
+         */
 
         val backBtn = findViewById<ImageButton>(R.id.backArrowButton)
         backBtn.setOnClickListener{

@@ -46,7 +46,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
         val editProfile1 = findViewById<FrameLayout>(R.id.editprofile1)
-        val editProfile2 = findViewById<FrameLayout>(R.id.editprofile2)
+        //val editProfile2 = findViewById<FrameLayout>(R.id.editprofile2)
 
         editProfile1.setOnClickListener {
             val intent = Intent(this, EditProfileActivity::class.java)
@@ -54,11 +54,13 @@ class ProfileActivity : AppCompatActivity() {
 
         }
 
+        /*
         editProfile2.setOnClickListener {
             val intent = Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
 
         }
+        */
 
         val bookedSessionBtn = findViewById<ImageButton>(R.id.bookedSessionButton)
         bookedSessionBtn.setOnClickListener{

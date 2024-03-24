@@ -43,7 +43,7 @@
 
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/chatWithName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -81,137 +81,39 @@
 
     <!-- ============================================= -->
 
-    <ScrollView
+    <!-- ============================================= -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_marginTop="76dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        tools:ignore="MissingConstraints" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginRight="30dp"
-
-            android:layout_gravity="bottom"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:background="@drawable/single_message_bg"
-                android:text="Hello, You there?"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:paddingEnd="10dp"
-                android:text="10:30"
-                android:textColor="@color/gray"
-                android:textSize="10dp"
-                tools:ignore="TextSizeCheck" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/chat_icon1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/login_signup_button_background"
-                    android:text="Yes"
-                    android:textColor="@color/black" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="60dp"
-                android:text="10:32"
-                android:textColor="@color/gray"
-                android:textSize="10dp"
-                tools:ignore="TextSizeCheck" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:background="@drawable/single_message_bg"
-                android:text="I need your guidance."
-                android:textColor="@color/black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:paddingEnd="10dp"
-                android:text="10:30"
-                android:textColor="@color/gray"
-                android:textSize="10dp"
-                tools:ignore="TextSizeCheck" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/chat_icon1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/login_signup_button_background"
-                    android:text="How can I help you?"
-                    android:textColor="@color/black" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="60dp"
-                android:text="10:32"
-                android:textColor="@color/gray"
-                android:textSize="10dp"
-                tools:ignore="TextSizeCheck" />
-
-
-        </LinearLayout>
-
-    </ScrollView>
-
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:indeterminate="false"
+        android:max="100"
+        app:layout_constraintBottom_toBottomOf="@+id/message_recycler_view"
+        tools:ignore="MissingConstraints" />
     <LinearLayout
+        android:id="@+id/linearLayout11"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="-15dp"
-        android:gravity="top"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="-15dp"
         android:background="@drawable/chat_message_send_background"
+        android:gravity="top"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -228,19 +130,20 @@
             android:id="@+id/addPhotoButton"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="3dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
             android:background="@drawable/add_photo_icon"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <EditText
+            android:id="@+id/messageEditText"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="-10dp"
             android:hint="Type Something..."
             android:inputType="textMultiLine"
-            android:textColor="@color/DarkGreen"
+            android:textColor="@color/black"
             android:textColorHint="@color/white"
             android:textSize="15dp"
             tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
@@ -249,15 +152,15 @@
             android:id="@+id/cameraButton"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="3dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
             android:background="@drawable/camera_icon"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/audioButton"
+            android:id="@+id/voiceicon"
             android:layout_width="20dp"
-            android:layout_height="15dp"
+            android:layout_height="25dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/voice_recorder_icon"
@@ -267,15 +170,10 @@
             android:id="@+id/sendButton"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="3dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
             android:background="@drawable/message_send_icon"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-
-
-
-
 
 
     </LinearLayout>
